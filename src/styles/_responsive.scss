@@ -1,0 +1,14 @@
+// resposive-layout variables
+$pc-size: 700px;
+
+@mixin phone {
+  @media screen and (max-width: $pc-size) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: $pc-size) {
+    @content;
+  }
+}
