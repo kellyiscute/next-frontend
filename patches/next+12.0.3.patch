@@ -1,0 +1,26 @@
+diff --git a/node_modules/next/types/global.d.ts b/node_modules/next/types/global.d.ts
+index 56c6f92..4d9e269 100644
+--- a/node_modules/next/types/global.d.ts
++++ b/node_modules/next/types/global.d.ts
+@@ -11,21 +11,6 @@ declare namespace NodeJS {
+   }
+ }
+ 
+-declare module '*.module.css' {
+-  const classes: { readonly [key: string]: string }
+-  export default classes
+-}
+-
+-declare module '*.module.sass' {
+-  const classes: { readonly [key: string]: string }
+-  export default classes
+-}
+-
+-declare module '*.module.scss' {
+-  const classes: { readonly [key: string]: string }
+-  export default classes
+-}
+-
+ interface Window {
+   MSInputMethodContext?: unknown
+ }
