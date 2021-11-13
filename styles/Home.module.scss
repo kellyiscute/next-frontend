@@ -1,0 +1,17 @@
+@use "styles/colors" as colors;
+@use "styles/responsive" as r;
+
+.root {
+  @include r.pc {
+    padding: 50px 70px;
+    min-width: 800px;
+    width: 80%;
+  }
+  @include r.phone {
+    padding: 2.5rem 1rem;
+  }
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 900px;
+  background: colors.$dracula-gray-dark;
+}

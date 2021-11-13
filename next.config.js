@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: ["styles/"],
+    includePaths: ["src/styles/"],
   },
-  basePath: "/src",
+  basePath: "",
 };

@@ -1,0 +1,96 @@
+@use "styles/responsive" as r;
+@use "styles/colors";
+$avatar-pc-size: 250px;
+
+.basicInfoBar {
+  display: flex;
+  @include r.phone {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  @include r.pc {
+    justify-content: space-between;
+  }
+
+  .introContainer {
+    h1 {
+      margin: 0;
+      color: white;
+    }
+    @include r.pc {
+      height: 100%;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    @include r.phone {
+      h1 {
+        margin-top: 1rem;
+        text-align: center;
+      }
+    }
+
+    h3 {
+      color: colors.$white-text-2;
+      @include r.pc {
+        margin: 0.5rem 0 1.5rem 0;
+        max-width: 80%;
+      }
+      @include r.phone {
+        margin-top: 0.2rem;
+        text-align: center;
+      }
+    }
+
+    .tagContainer {
+      @include r.pc {
+        margin-right: 2rem;
+      }
+
+      .catagoryContainer {
+        flex-wrap: wrap;
+        display: flex;
+        img {
+          margin: 2px 3px;
+          @include r.pc {
+            height: 1.7rem;
+            width: 1.7rem;
+          }
+          @include r.phone {
+            height: 2rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .avatarRing {
+    background: #22232e;
+    padding: 0.3rem;
+  }
+
+  .imgContainer {
+    flex: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include r.pc {
+      height: $avatar-pc-size;
+      width: $avatar-pc-size;
+    }
+    @include r.phone {
+      height: 75vw;
+      width: 75vw;
+      max-width: 300px;
+      max-height: 300px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
