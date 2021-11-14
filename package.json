@@ -8,6 +8,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "echarts": "^5.2.2",
     "next": "12.0.3",
     "octokit": "^1.7.0",
     "react": "17.0.2",
@@ -15,6 +17,7 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
     "eslint": "7",

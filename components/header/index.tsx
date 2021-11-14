@@ -1,11 +1,10 @@
 import { NextComponentType } from "next";
 import style from "./header.module.scss";
-import { draculaForegrounds, getRandomArbitrary } from "utils";
 
 const tags = {
   languages: [
-    "javascript/javascript-original.svg",
     "typescript/typescript-original.svg",
+    "javascript/javascript-original.svg",
     "dart/dart-original.svg",
     "sass/sass-original.svg",
     "python/python-original.svg",
@@ -50,12 +49,12 @@ const Header: NextComponentType = () => {
 
           <div className={style.tagContainer}>
             {Object.entries(tags).map(([k, v], i) => (
-              <div style={{ marginTop: "5px" }}>
+              <div style={{ marginTop: "5px" }} key={`tag ${i}`}>
                 {k}
                 <hr style={{ margin: "3px 0" }} />
                 <div className={style.catagoryContainer}>
-                  {v.map((v) => (
-                    <img src={`${rootUrl}${v}`} />
+                  {v.map((v, j) => (
+                    <img src={`${rootUrl}${v}`} key={`tag ${i} - ${j}`} />
                   ))}
                 </div>
               </div>
