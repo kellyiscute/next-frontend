@@ -38,3 +38,4 @@ yarn-error.log*
 
 # secrets
 secrets.ts
+gh-pat.txt

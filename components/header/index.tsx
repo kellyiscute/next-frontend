@@ -6,21 +6,21 @@ const tags = {
     "typescript/typescript-original.svg",
     "javascript/javascript-original.svg",
     "dart/dart-original.svg",
-    "sass/sass-original.svg",
     "python/python-original.svg",
     "go/go-original.svg",
     "csharp/csharp-original.svg",
+    "sass/sass-original.svg",
   ],
   frameworks: [
     "react/react-original-wordmark.svg",
-    "vuejs/vuejs-original-wordmark.svg",
-    "nextjs/nextjs-original.svg",
+    "vuejs/vuejs-original.svg",
+    ["nextjs/nextjs-original.svg", "inverted"],
     "nuxtjs/nuxtjs-original.svg",
     "nestjs/nestjs-plain.svg",
-    "express/express-original-wordmark.svg",
+    ["express/express-original.svg", "inverted"],
     "flutter/flutter-original.svg",
     "django/django-original.svg",
-    "flask/flask-original.svg",
+    ["flask/flask-original.svg", "inverted"],
   ],
   "editors & tools": [
     "jetbrains/jetbrains-original.svg",
@@ -28,7 +28,7 @@ const tags = {
     "vim/vim-original.svg",
     "babel/babel-original.svg",
     "webpack/webpack-original.svg",
-    "docker/docker-original-wordmark.svg",
+    "docker/docker-original.svg",
     "redis/redis-original-wordmark.svg",
     "mysql/mysql-original.svg",
     "nginx/nginx-original.svg",
@@ -44,7 +44,7 @@ const Header: NextComponentType = () => {
         <div className={style.introContainer}>
           <h1>Kelly</h1>
           <h3 className={style.bio}>
-            A Full-Stack developer that really do everything
+            A Full-Stack developer that really do <strong>ANYTHING</strong>
           </h3>
 
           <div className={style.tagContainer}>
@@ -53,9 +53,17 @@ const Header: NextComponentType = () => {
                 {k}
                 <hr style={{ margin: "3px 0" }} />
                 <div className={style.catagoryContainer}>
-                  {v.map((v, j) => (
-                    <img src={`${rootUrl}${v}`} key={`tag ${i} - ${j}`} />
-                  ))}
+                  {v.map((v, j) =>
+                    typeof v === "string" ? (
+                      <img src={`${rootUrl}${v}`} key={`tag ${i} - ${j}`} />
+                    ) : (
+                      <img
+                        src={`${rootUrl}${v[0]}`}
+                        className={style[v[1]]}
+                        key={`tag ${i} - ${j}`}
+                      />
+                    )
+                  )}
                 </div>
               </div>
             ))}

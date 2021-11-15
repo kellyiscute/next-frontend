@@ -1,0 +1,91 @@
+@use "styles/responsive" as r;
+
+.root {
+  h4 {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+  .rootWrapper {
+    display: flex;
+  }
+}
+
+.summaryCharts {
+  flex: auto;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  padding: 1rem;
+
+  h5 {
+    margin: 0 0 0.5rem 0;
+    @include r.pc {
+      font-size: 1.1rem;
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .itemContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      overflow: scroll;
+      flex: auto;
+      align-content: flex-start;
+      @include r.pc {
+        height: 13rem;
+      }
+      @include r.phone {
+        height: 10rem;
+      }
+
+      .itemHover {
+        filter: brightness(1.2);
+      }
+
+      .itemDimmed {
+        filter: brightness(0.3);
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+
+        .bullet {
+          border-radius: 50%;
+          margin-right: 3px;
+          @include r.pc {
+            height: 0.4rem;
+            width: 0.4rem;
+          }
+          @include r.phone {
+            height: 0.25rem;
+            width: 0.25rem;
+          }
+        }
+        .name {
+          margin-right: 1rem;
+          @include r.pc {
+            font-size: 0.5rem;
+          }
+          @include r.phone {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .chart {
+      @include r.pc {
+        height: 13rem;
+        width: 13rem;
+      }
+      @include r.phone {
+        height: 10rem;
+        width: 10rem;
+      }
+    }
+  }
+}
