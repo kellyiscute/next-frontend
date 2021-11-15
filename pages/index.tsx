@@ -20,16 +20,18 @@ interface IHomepageProps {
 
 const Home: NextPage<IHomepageProps> = ({ wakatimeSummary }) => {
   return (
-    <Head>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
-      />
+    <div>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+        />
+      </Head>
       <div className={classNames.root}>
         <Header />
         <Summary wakatimeSummary={wakatimeSummary} />
       </div>
-    </Head>
+    </div>
   );
 };
 

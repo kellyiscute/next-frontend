@@ -16,29 +16,66 @@
   border: 1px solid #30363d;
   padding: 1rem;
 
+  h5 {
+    margin: 0 0 0.5rem 0;
+  }
+
   .contentWrapper {
     display: flex;
+    justify-content: space-between;
 
     .itemContainer {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 10rem;
+      @include r.pc {
+        height: 10rem;
+      }
+      @include r.phone {
+        height: 6rem;
+      }
+
+      .itemHover {
+        filter: brightness(2);
+        text-shadow: 3px;
+      }
 
       .item {
         display: flex;
         align-items: center;
 
         .bullet {
-          height: 0.4rem;
-          width: 0.4rem;
           border-radius: 50%;
           margin-right: 3px;
+          @include r.pc {
+            height: 0.4rem;
+            width: 0.4rem;
+          }
+          @include r.phone {
+            height: 0.25rem;
+            width: 0.25rem;
+          }
         }
         .name {
-          font-size: 0.3rem;
           margin-right: 1rem;
+          @include r.pc {
+            font-size: 0.3rem;
+          }
+          @include r.phone {
+            font-size: 0.5rem;
+          }
         }
+      }
+    }
+
+    .chart {
+      @include r.pc {
+        height: 10rem;
+        width: 10rem;
+      }
+      @include r.phone {
+        height: 6rem;
+        width: 6rem;
       }
     }
   }
