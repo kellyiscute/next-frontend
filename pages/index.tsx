@@ -39,7 +39,7 @@ const Home: NextPage<IHomepageProps> = ({ wakatimeSummary }) => {
   useEffect(() => {}, []);
   return (
     <div>
-      <Script>
+      <Script id="hj">
         {`(function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
           h._hjSettings={hjid:2704139,hjsv:6};
