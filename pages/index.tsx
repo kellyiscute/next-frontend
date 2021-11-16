@@ -41,6 +41,7 @@ const Home: NextPage<IHomepageProps> = ({ wakatimeSummary }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
         />
+        <script src="/hotjar.js" />
       </Head>
       <div className={classNames.root}>
         <Header />
