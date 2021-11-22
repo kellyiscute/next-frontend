@@ -1,3 +1,4 @@
+import GithubSummary from "components/github-summary";
 import WakaTimeSummary from "components/wakatime-summary";
 import { IWakatimeSummary } from "models/wakatime/summary";
 import { NextComponentType } from "next";
@@ -12,6 +13,8 @@ const Summary: NextComponentType<never, never, ISummaryProps> = ({
   return (
     <div className={style.root}>
       <WakaTimeSummary wakatimeSummary={wakatimeSummary} />
+      <div className={style.spacer} />
+      <GithubSummary />
     </div>
   );
 };

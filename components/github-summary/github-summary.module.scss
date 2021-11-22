@@ -1,0 +1,19 @@
+@use "styles/responsive" as r;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  @include r.pc {
+    min-width: calc(50% - 0.5rem);
+    flex: none;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+  .box {
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    flex: auto;
+  }
+}

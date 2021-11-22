@@ -82,27 +82,25 @@ const WakaTimeSummary: NextComponentType<never, never, IWakaTimeSummaryProps> =
     return (
       <div className={style.root}>
         <h4>WakaTime 7-days-summary</h4>
-        <div className={style.rootWrapper}>
-          <div className={style.summaryCharts}>
-            <h5>Language Usage (By time)</h5>
-            <div className={style.contentWrapper}>
-              <div className={style.itemContainer}>
-                {wakatimeSummary.data.languages
-                  .filter((v) => v.name !== "Other")
-                  .map((v, i) => (
-                    <div className={constructClassnames(v.name)} key={i}>
-                      <div
-                        className={style.bullet}
-                        style={{
-                          background: getLanguageColor(v.name),
-                        }}
-                      />
-                      <div className={style.name}>{v.name}</div>
-                    </div>
-                  ))}
-              </div>
-              <div className={style.chart} ref={langChartRef} />
+        <div className={style.summaryCharts}>
+          <h5>Language Usage (By time)</h5>
+          <div className={style.contentWrapper}>
+            <div className={style.itemContainer}>
+              {wakatimeSummary.data.languages
+                .filter((v) => v.name !== "Other")
+                .map((v, i) => (
+                  <div className={constructClassnames(v.name)} key={i}>
+                    <div
+                      className={style.bullet}
+                      style={{
+                        background: getLanguageColor(v.name),
+                      }}
+                    />
+                    <div className={style.name}>{v.name}</div>
+                  </div>
+                ))}
             </div>
+            <div className={style.chart} ref={langChartRef} />
           </div>
         </div>
       </div>

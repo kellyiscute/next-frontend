@@ -1,3 +1,14 @@
+@use "styles/responsive" as r;
+
 .root {
   display: flex;
+  flex-wrap: wrap;
+  @include r.phone {
+    flex-direction: column;
+  }
+
+  .spacer {
+    flex: none;
+    width: 1rem;
+  }
 }
