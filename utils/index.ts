@@ -22,3 +22,16 @@ export function getLanguageColor(lang: string): string {
     (langColors as any)[languageMappings[processed] ?? processed] ?? "#9ea2a7"
   );
 }
+
+export function getReadableNumber(num: number): string {
+  const digits = num.toString();
+  let result = "";
+  for (let i = 0; i < digits.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      result += digits.charAt(i) + ",";
+    } else {
+      result += digits.charAt(i);
+    }
+  }
+  return result.substring(0, result.length - 1);
+}
