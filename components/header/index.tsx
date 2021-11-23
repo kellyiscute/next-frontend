@@ -12,7 +12,7 @@ const Header: NextComponentType = () => {
           <h3 className={style.bio}>
             A Full-Stack developer that really do <strong>ANYTHING</strong>
           </h3>
-          <p>I know you may not believe in this, but it's all real...</p>
+          <p>I know you may not believe in this, but it&apos;s all real...</p>
 
           <div className={style.tagContainer}>
             {Object.entries(tags).map(([k, v], i) => (
