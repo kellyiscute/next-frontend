@@ -3,9 +3,23 @@
 .root {
   display: flex;
   flex-direction: column;
+  h4 {
+    margin-bottom: 0.7rem;
+  }
+  h3 {
+    margin: 0;
+  }
   @include r.pc {
     min-width: calc(50% - 0.5rem);
     flex: none;
+  }
+  .flex {
+    display: flex;
+  }
+  .flexCenterAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   h4 {
     text-align: center;
@@ -22,12 +36,10 @@
       justify-content: space-between;
       .content {
         h3 {
-          span {
-            img {
-              color: white;
-              height: 10px;
-              width: 10px;
-            }
+          img {
+            color: white;
+            height: 100%;
+            width: 1rem;
           }
         }
         p {
