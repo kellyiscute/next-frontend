@@ -1,12 +1,68 @@
 @use "styles/responsive" as r;
+@use "styles/colors" as c;
 
 .root {
   display: flex;
   flex-direction: column;
-  h4 {
-    margin-bottom: 0.7rem;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 0.7rem;
+    }
+    .popover {
+      position: relative;
+      padding-bottom: 0.7rem;
+      padding-left: 0.5rem;
+      border-radius: 50%;
+      .trigger {
+        .popoverInner {
+          transition: all 0.3s ease;
+          position: absolute;
+          opacity: 0;
+          top: -0.3rem;
+          @include r.pc {
+            right: 0;
+          }
+          @include r.phone {
+            right: -150%;
+          }
+          white-space: nowrap;
+          transform: translateY(-100%);
+          padding: 0.5rem;
+          background: #1d2024 50%;
+          border-radius: 6px;
+          p {
+            margin: 0;
+            a {
+              text-decoration: underline;
+              color: c.$dracula-cyan;
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+        &:hover {
+          .popoverInner {
+            opacity: 0.95;
+          }
+        }
+      }
+      svg {
+        opacity: 0.2;
+        transition: all 0.1s ease;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
   }
   h3 {
+    font-size: medium;
     margin: 0;
   }
   @include r.pc {
@@ -21,29 +77,34 @@
     justify-content: center;
     align-items: center;
   }
-  h4 {
-    text-align: center;
-    margin-bottom: 0.7rem;
-  }
   .box {
     border-radius: 6px;
     border: 1px solid #30363d;
-    padding: 1rem 10%;
+    @include r.pc {
+      padding: 1rem 10%;
+    }
+    @include r.phone {
+      padding: 1.2rem 1rem;
+    }
     flex: auto;
 
     .contentWrapper {
       display: flex;
       justify-content: space-between;
       .content {
-        h3 {
-          img {
-            color: white;
-            height: 100%;
-            width: 1rem;
+        .indent {
+          margin-top: 0.2rem;
+          padding: 0 0 0 1rem;
+          .row {
+            display: flex;
+            align-items: center;
+            svg {
+              margin-right: 0.2rem;
+            }
+            p {
+              margin: 0.3rem 0;
+            }
           }
-        }
-        p {
-          padding-left: 1rem;
         }
       }
     }

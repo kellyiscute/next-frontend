@@ -28,10 +28,10 @@ export function getReadableNumber(num: number): string {
   let result = "";
   for (let i = 0; i < digits.length; i++) {
     if ((i + 1) % 3 === 0) {
-      result += digits.charAt(i) + ",";
+      result += digits.charAt(i) + ", ";
     } else {
       result += digits.charAt(i);
     }
   }
-  return result.substring(0, result.length - 1);
+  return result.substring(0, result.length - 2);
 }
