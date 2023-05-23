@@ -82,7 +82,7 @@ const WakaTimeSummary: NextComponentType<never, never, IWakaTimeSummaryProps> =
     return (
       <div className={style.root}>
         <div className={style.title}>
-          <h4>WakaTime 7-days-summary</h4>
+          <h4>WakaTime all-time-summary</h4>
         </div>
         <div className={style.summaryCharts}>
           <h5>Language Usage (By time)</h5>

@@ -10,7 +10,7 @@ const Header: NextComponentType = () => {
         <div className={style.introContainer}>
           <h1>Kelly</h1>
           <h3 className={style.bio}>
-            A Full-Stack developer that really do <strong>ANYTHING</strong>
+            A Full-Stack developer that really does <strong>ANYTHING</strong>
           </h3>
           <p>I know you may not believe in this, but it&apos;s all real...</p>
 
